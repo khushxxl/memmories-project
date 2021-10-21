@@ -8,13 +8,13 @@ const Navbar = () => {
   const { data: session } = useSession()
 
   return (
-    <div className="cursor-pointer flex flex-col items-start justify-between mx-10 mt-3">
+    <div className="cursor-pointer flex flex-col items-center md:items-start mx-10 mt-3">
       <div>
-        <h1 className="text-2xl font-extrabold ml-14 md:ml-0">Memmories</h1>
+        <h1 className="text-2xl font-extrabold ml-14  md:ml-0">Memmories</h1>
       </div>
 
       {session && (
-        <div className="cursor-pointer items-center">
+        <div className="cursor-pointer items-center text-center">
           <button
             className="text-md bg-white text-black rounded-md p-2 font-semibold mt-2 text-center items-center flex ml-24 md:ml-0"
             onClick={signOut}

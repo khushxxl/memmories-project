@@ -35,10 +35,10 @@ const Cards = () => {
         return (
           <div
             key={data.id}
-            className=" w-[300px] bg-white text-black m-10 rounded-md"
+            className=" w-[300px]  bg-white text-black m-10 rounded-md"
           >
             <div className="p-3">
-              <div className="flex items-center mb-3">
+              <div className="flex items-center mb-0">
                 {/* Image of who posts */}
                 <img
                   src={memmory.data().profileImg}
@@ -50,17 +50,21 @@ const Cards = () => {
                   {memmory.data().name}
                 </p>
               </div>
+              <div>
+                <p className="text-xs text-gray-400 mb-3 mt-1">
+                  {[memmory.data().timestamp?.toDate().toString()]}
+                </p>
+              </div>
+
               <img
                 src={memmory.data().memmoryImage}
                 alt=""
-                className="border-red-500 rounded-2xl border-2 p-2"
+                className="border-red-500 rounded-2xl border-2 p-2 h-[200px] w-[400px]"
               />
               <p className="font-semibold text-black ml-2 mt-5">
                 {memmory.data().title}
               </p>
-              <p className="overflow-ellipsis ml-2">
-                {memmory.data().description}
-              </p>
+              <p className="ml-2">{memmory.data().description}</p>
             </div>
 
             {memmory.data().profileImg == session?.user?.image && (
