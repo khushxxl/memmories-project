@@ -10,12 +10,15 @@ const Navbar = () => {
   return (
     <div className="cursor-pointer flex flex-col items-start justify-between mx-10 mt-3">
       <div>
-        <h1 className="text-2xl font-extrabold">Memmories</h1>
+        <h1 className="text-2xl font-extrabold ml-14 md:ml-0">Memmories</h1>
       </div>
 
       {session && (
-        <div className="cursor-pointer">
-          <button className="text-md font-semibold mt-2" onClick={signOut}>
+        <div className="cursor-pointer items-center">
+          <button
+            className="text-md bg-white text-black rounded-md p-2 font-semibold mt-2 text-center items-center flex ml-24 md:ml-0"
+            onClick={signOut}
+          >
             Sign Out
           </button>
           {/* <h1 className=" "></h1> */}
@@ -32,9 +35,11 @@ const Navbar = () => {
         </div>
       )}
       {!session && (
-        <div className="cursor-pointer">
+        <div className="cursor-pointer items-center">
           <Link href="auth/signin">
-            <h1 className="text-md font-semibold mt-2 ">Sign In</h1>
+            <button className="text-md bg-white text-black rounded-md p-2 font-semibold mt-2 text-center items-center flex ml-20 md:ml-0">
+              Sign In
+            </button>
           </Link>
         </div>
       )}

@@ -118,26 +118,9 @@ const InputSection = () => {
               />
             </div>
 
-            <div>
-              {selectedFile ? (
-                <img
-                  src={selectedFile}
-                  onClick={() => setSelectedFile(null)}
-                  alt=""
-                  className="w-full object-contain cursor-pointer mb-10"
-                />
-              ) : (
-                <div className="text-black items-center place-items-center text-center mb-10">
-                  <p onClick={() => filePickerRef.current.click()}>
-                    No Files Selected
-                  </p>
-                </div>
-              )}
-            </div>
-
-            <div className="flex items-center flex-col  justify-between text-center">
+            <div className="flex items-center flex-row  justify-between text-center">
               <button
-                className="bg-black text-white mb-3 hover:bg-blue-700 font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline text-center"
+                className="bg-black text-white  hover:bg-blue-700 font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline text-center"
                 type="button"
                 onClick={() => filePickerRef.current.click()}
               >
@@ -149,9 +132,26 @@ const InputSection = () => {
                 onClick={addData}
                 disabled={!selectedFile}
               >
-                {loading ? 'Adding....' : 'Add'}
+                {loading ? 'Uploading....' : 'Upload'}
               </button>
             </div>
+            <div>
+              {selectedFile ? (
+                <img
+                  src={selectedFile}
+                  onClick={() => setSelectedFile(null)}
+                  alt=""
+                  className="w-full object-contain cursor-pointer mt-10"
+                />
+              ) : (
+                <div className="text-black items-center place-items-center text-center mb-10">
+                  <p onClick={() => filePickerRef.current.click()}>
+                    No Files Selected
+                  </p>
+                </div>
+              )}
+            </div>
+
             <div>
               <p className="text-black text-center p-4">{error}</p>
             </div>
