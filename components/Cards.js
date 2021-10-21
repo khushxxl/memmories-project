@@ -30,7 +30,7 @@ const Cards = () => {
   )
 
   return (
-    <div className="grid grid-cols-1  lg:grid-cols-2 rounded-3xl mt-24 lg:mt-0">
+    <div className="grid grid-cols-1  lg:grid-cols-2 rounded-3xl lg:mt-0">
       {memmoryData.map((memmory) => {
         return (
           <div

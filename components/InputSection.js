@@ -75,7 +75,7 @@ const InputSection = () => {
   }
 
   return (
-    <div className=" w-[300px] h-[370px] bg-white ml-10 rounded-2xl">
+    <div className=" w-[300px] h-[370px] bg-white ml-10 rounded-2xl mb-48">
       <div className="w-full max-w-xs rounded-2xl">
         {session && (
           <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
