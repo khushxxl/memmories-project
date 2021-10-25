@@ -10,6 +10,9 @@ npm run dev
 yarn dev
 ```
 
+
+<img width="1440" alt="Screenshot 2021-10-21 at 12 36 37 PM" src="https://user-images.githubusercontent.com/73185436/138690291-fef3cfa7-9305-4338-9d0a-7234b5bd576a.png">
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
